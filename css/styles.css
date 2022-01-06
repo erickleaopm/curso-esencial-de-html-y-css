@@ -43,3 +43,32 @@ h2 {
 h3 {
   font-size: 1.5rem;
 }
+
+pre {
+  background: #FEC62E;
+}
+
+.hero {
+  background-image: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url('../images/pattern.png');
+  height: 350px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) ". ";
+}
+
+.section-content h3::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 4px;
+  background: var(--gray30);
+}
