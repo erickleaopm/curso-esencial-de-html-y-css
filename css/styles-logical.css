@@ -23,6 +23,10 @@ blockquote {
   margin-block-start: 8rem;
   margin-block-end: 6.3rem;
   margin-inline: 0;
+  padding-inline-start: 2.4rem;
+  padding-inline-end: 1.7rem;
+  padding-block-start: 2.4rem;
+  padding-block-end: 2.4rem;
 }
 
 blockquote p:first-child::before {
@@ -101,11 +105,27 @@ pre {
   color: white;
   font-size: 1.6rem;
   border-radius: 0.8rem;
+  padding: 4rem;
+  overflow: auto;
 }
 
 .hero {
   background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
   height: 35rem;
+}
+
+.main {
+
+}
+
+.wrapper {
+  /* width */
+  max-inline-size: 90.2rem;
+  margin: auto;
+}
+
+.main-content {
+  padding-inline: 1.6rem;
 }
 
 .section-content {
@@ -129,14 +149,6 @@ pre {
   content: counter(titleList, decimal) ". ";
 }
 
-.section-content h3::after {
-  content: '';
-  display: inline-block;
-  width: 2rem;
-  height: 0.25rem;
-  background: var(--white30);
-}
-
 .section-content + hr {
   display: none;
 }
@@ -144,6 +156,8 @@ pre {
 .section-content img {
   display: block;
   margin-block-start: 4rem;
+  /* max-width: 100% */
+  max-inline-size: 100%;
 }
 
 .section-content ol li {
