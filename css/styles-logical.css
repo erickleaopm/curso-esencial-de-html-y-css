@@ -1,22 +1,28 @@
 :root {
-  font-size: 16px;
-  --gray30: #212121;
-  --gray20: #212429;
-  --gray10: #616161;
+  font-size: 10px;
+  --white30: #251F24;
+  --white20: #3A3539;
+  --white10: #A5A3A5;
+  --blue: #157EFB;
 }
 
 body {
-  color: var(--gray30);
-  font-family: "Roboto", sans-serif;
+  background: var(--white30);
+  color: white;
+  font-family: "Nunito", sans-serif;
   margin: 0;
 }
 
 a {
-  color: var(--gray30);
+  color: var(--blue);
 }
 
 blockquote {
-  margin: 0;
+  background: var(--white20);
+  border-radius: 0.8rem;
+  margin-block-start: 8rem;
+  margin-block-end: 6.3rem;
+  margin-inline: 0;
 }
 
 blockquote p:first-child::before {
@@ -31,17 +37,21 @@ blockquote p:nth-child(2)::before {
 }
 
 header {
-  color: var(--gray10);
-  font-size: 0.875rem;
+  color: white;
+  font-size: 1.4rem;
 }
 
 header a {
-  color: var(--gray10);
+  color: var(--white10);
   text-decoration: none;
 }
 
 header a:hover {
-  color: var(--gray30);
+  color: white;
+}
+
+header li {
+  color: var(--white10);
 }
 
 nav details summary {
@@ -49,39 +59,66 @@ nav details summary {
 }
 
 h1 {
-  font-size: 3.75rem;
-  line-height: 4.39rem;
-  margin: 4rem 0 1rem;
+  color: white;
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 8.7rem;
+  margin-block-start: 6.4rem;
+  margin-block-end: 1.6rem;
+}
+
+h1 + p {
+  color: var(--white10);
+  font-size: 17px;
 }
 
 h2 {
-  font-size: 2rem;
-  line-height: 2.34rem;
-  margin: 0;
-  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 5.4rem;
+  margin-block: 4rem;
 }
 
 h3 {
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  margin: 1rem 0 1.5rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 4.3rem;
+  margin-block: 1.6rem;
+}
+
+p {
+  font-size: 1.7rem;
+  margin-block: 1.6rem;
 }
 
 hr {
-  margin: 4rem 0;
+  margin-block: 4rem;
+  border-color: rgba(97,97,97, 0.2);
 }
 
 pre {
-  background: #FEC62E;
+  background: var(--white20);
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
 }
 
 .hero {
-  background-image: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url('../images/pattern.png');
-  height: 21.875rem;
+  background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  height: 35rem;
 }
 
 .section-content {
   counter-reset: titleList;
+}
+
+.section-content p {
+  color: var(--white10);
+}
+
+.section-content blockquote p {
+  color: white;
+  font-size: 2.4rem;
 }
 
 .section-content h3 {
@@ -97,17 +134,27 @@ pre {
   display: inline-block;
   width: 2rem;
   height: 0.25rem;
-  background: var(--gray30);
+  background: var(--white30);
+}
+
+.section-content + hr {
+  display: none;
 }
 
 .section-content img {
-  margin-top: 2.5rem;
+  display: block;
+  margin-block-start: 4rem;
 }
 
 .section-content ol li {
-  line-height: 1.5rem;
+  line-height: 2.4rem;
 }
 
 .section-content ul li {
-  margin-bottom: 1rem;
+  margin-block-end: 1.6rem;
+}
+
+.section-content li {
+  color: var(--white10);
+  font-size: 1.7rem;
 }
