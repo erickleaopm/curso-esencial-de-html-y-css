@@ -198,3 +198,41 @@ pre {
   color: var(--white10);
   font-size: 1.7rem;
 }
+
+.slider-container {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.video {
+  margin: 0;
+  display: inline-block;
+  inline-size: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 1.6rem;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  background: var(--white20);
+  border-radius: 50%;
+  margin-inline: 0.4rem;
+}
+
+.slider-bullet:hover {
+  background: white;
+}
