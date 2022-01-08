@@ -8,6 +8,10 @@
   --lightGray: #808080;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--gray20);
   font-family: "Roboto", sans-serif;
@@ -42,8 +46,13 @@ blockquote span::before {
 }
 
 header {
+  width: 188px;
   color: var(--gray10);
   font-size: 0.875rem;
+  position: absolute;
+  top: 64px;
+  /* 188px + 44px margin */
+  left: -232px;
 }
 
 header a {
@@ -70,6 +79,7 @@ nav ol li:last-child {
 h1 {
   color: var(--gray40);
   font-size: 3.75rem;
+  font-weight: normal;
   line-height: 4.39rem;
   margin-top: 4rem;
   margin-bottom: 1rem;
@@ -116,9 +126,33 @@ pre {
   height: 21.875rem;
 }
 
+.main {
+  /* background: red; */
+}
+
+.wrapper {
+  /* 56.375rem => 902px */
+  width: 56.375rem;
+  margin: auto;
+}
+
+.main-content {
+  background: white;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  position: relative;
+}
+
 .section-content {
   counter-reset: titleList;
   margin-top: 10.25rem;
+  position: relative;
 }
 
 .section-content:first-of-type {
@@ -131,7 +165,9 @@ pre {
 
 .section-content h3 {
   counter-increment: titleList;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+  background: white;
+  position: relative;
 }
 
 .section-content h3::before {
@@ -141,9 +177,12 @@ pre {
 .section-content h3::after {
   content: "";
   display: inline-block;
-  width: 2rem;
+  width: 5rem;
   height: 0.25rem;
   background: var(--gray20);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .section-content img {
