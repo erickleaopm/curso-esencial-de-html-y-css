@@ -26,13 +26,9 @@ a {
 blockquote {
   background: var(--white20);
   border-radius: 0.8rem;
-  margin-block-start: 8rem;
-  margin-block-end: 6.3rem;
+  margin-block: 4rem;
   margin-inline: 0;
-  padding-inline-start: 2.4rem;
-  padding-inline-end: 1.7rem;
-  padding-block-start: 2.4rem;
-  padding-block-end: 2.4rem;
+  padding: 0.8rem;
 }
 
 blockquote p:first-child::before {
@@ -49,7 +45,7 @@ blockquote p:nth-child(2)::before {
 header {
   color: var(--white);
   font-size: 1.4rem;
-  margin-block-start: 4rem;
+  margin-block-start: 2.4rem;
 }
 
 header a {
@@ -72,10 +68,10 @@ nav details summary {
 
 h1 {
   color: var(--white);
-  font-size: 6.4rem;
+  font-size: 4rem;
   font-weight: 700;
-  line-height: 8.7rem;
-  margin-block-start: 6.4rem;
+  line-height: 5.4rem;
+  margin-block-start: 4.8rem;
   margin-block-end: 1.6rem;
 }
 
@@ -85,16 +81,16 @@ h1 + p {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 2.4rem;
   font-weight: bold;
-  line-height: 5.4rem;
-  margin-block: 4rem;
+  line-height: 3.2rem;
+  margin-block: 2.4rem;
 }
 
 h3 {
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 4.3rem;
+  line-height: 2.7rem;
   margin-block: 1.6rem;
 }
 
@@ -112,8 +108,9 @@ pre {
   background: var(--white20);
   color: var(--white);
   font-size: 1.6rem;
+  line-height: 2.4rem;
   border-radius: 0.8rem;
-  padding: 4rem;
+  padding: 1.6rem;
   overflow: auto;
   margin-block-end: 4rem;
 }
@@ -121,6 +118,10 @@ pre {
 .hero {
   background-image: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
   block-size: 9.6rem;
+}
+
+.header-content {
+  padding-inline: 2rem;
 }
 
 .main {
@@ -146,7 +147,15 @@ pre {
 
 .section-content blockquote p {
   color: var(--white);
-  font-size: 2.4rem;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+}
+
+.section-content:last-child h2 {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-block-start: 4rem;
+  margin-block-end: 1.6rem;
 }
 
 .section-content h3 {
@@ -163,7 +172,7 @@ pre {
 
 .section-content img {
   display: block;
-  margin-block-start: 4rem;
+  margin-block-start: 2.4rem;
   /* max-width: 100% */
   max-inline-size: 100%;
 }
@@ -204,6 +213,7 @@ pre {
 .slider-bullet-list {
   text-align: center;
   margin-block-start: 1.6rem;
+  margin-block-end: 4rem;
 }
 
 .slider-bullet {
@@ -265,7 +275,9 @@ pre {
     inset-inline-start: -23.2rem;
     /* right */
     /* inset-inline-end: ; */
+    margin-block-start: 0;
   }
+
   .header {
     position: sticky;
     inset-block-start: -4.4rem;
@@ -274,8 +286,54 @@ pre {
   .header-content {
     position: relative;
     inset-block-start: 6.4rem;
+    padding-inline: 0;
   }
+
   .hero {
     block-size: 35rem;
+  }
+
+  h1 {
+    font-size: 6.4rem;
+    line-height: 8.7rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 5.4rem;
+    margin-block: 4rem;
+  }
+
+  h3 {
+    font-size: 3.2rem;
+    line-height: 4.3rem;
+    margin-block: 1.6rem;
+  }
+
+  .section-content img {
+    margin-block-start: 4rem;
+  }
+
+  blockquote {
+    margin-block-start: 8rem;
+    margin-block-end: 6.3rem;
+    padding-inline-start: 2.4rem;
+    padding-inline-end: 1.7rem;
+    padding-block-start: 2.4rem;
+    padding-block-end: 2.4rem;
+  }
+
+  .section-content blockquote p {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  pre {
+    padding: 4rem;
+  }
+
+  .section-content:last-child h2 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
   }
 }
